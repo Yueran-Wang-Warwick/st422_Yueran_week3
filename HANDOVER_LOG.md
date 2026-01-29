@@ -1,7 +1,7 @@
 # HANDOVER_LOG.md
 
-- Date: 2026-01-25
-- Recipient: Student B
+- Date: 2026-01-28
+- Recipient: Yueran’s friend
 - Repo tested: st422-week3-starter-repo
 - OS: Windows 11
 - R version: 4.4.1
@@ -14,3 +14,8 @@
   - outputs/figures/figure1_nps_boxplot.png
   - outputs/figures/figure2_churn_barplot.png
 - If FAIL: error message (copy exact message): N/A
+
+
+
+
+

@@ -1,8 +1,10 @@
 # ST422 Week 3: Customer Subscription Analysis
 
-**Author:** [Your Name]  
+**Author:** Yueran Wang 
+
 **Course:** ST422 Statistical Consulting  
-**Date:** October 2025
+
+**Date:** 28/01/2026
 
 
 
@@ -84,14 +86,15 @@ renv::restore()
 
 
 
-## How to Reproduce (Execution Steps)
+## How to Reproduce (Robust to dataset updates)
 
 Follow these steps to generate the analysis outputs from scratch.
 
-#### Generate Table 1
+#### Generate Table 1 (for st422_week3_subscription_v3)
 Run the following script to create the baseline characteristics table:
 
 ```R
+input_file <- "data/raw/st422_week3_subscription_v3.csv"
 source("src/make_table1.R")
 ```
 
@@ -100,11 +103,12 @@ source("src/make_table1.R")
 
 
 
-#### Generate Visualizations
+#### Generate Visualizations (for st422_week3_subscription_v3)
 
 Run the following script to create the NPS and Churn charts:
 
 ```R
+input_file <- "data/raw/st422_week3_subscription_v3.csv"
 source("src/make_figures.R")
 ```
 

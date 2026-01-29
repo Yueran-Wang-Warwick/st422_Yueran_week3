@@ -24,9 +24,17 @@ The dataset contains customer attributes such as region and plan type, usage pro
 
 ### Table 1
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("src/make_table1.R", local = TRUE)$value
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE}
+#input_file <- "data/raw/st422_week3_subscription_v1.csv"
+#source("src/make_table1.R")
+
+#input_file <- "data/raw/st422_week3_subscription_v2.csv"
+#source("src/make_table1.R")
+
+input_file <- "data/raw/st422_week3_subscription_v3.csv"
+source("src/make_table1.R")
 ```
+
 
 ### Key results from Table 1
 
@@ -36,6 +44,13 @@ Customers are split across Basic, Standard, and Premium plans, with Basic the la
 ### Figure 1 & 2
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#input_file <- "data/raw/st422_week3_subscription_v1.csv"
+#source("src/make_figures.R")
+
+#input_file <- "data/raw/st422_week3_subscription_v2.csv"
+#source("src/make_figures.R")
+
+input_file <- "data/raw/st422_week3_subscription_v3.csv"
 source("src/make_figures.R")
 ```
 
@@ -54,9 +69,6 @@ renv::snapshot()
 ```
 
 
-### html report
 
-```{r}
-rmarkdown::render("st422_project.Rmd", output_dir = "reports")
-```
+
 

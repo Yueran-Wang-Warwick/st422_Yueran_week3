@@ -15,7 +15,9 @@ library(ggplot2)
 # ------------------------------------------------------------------------------
 
 # Input file (Configurable for v1/v2/v3)
-input_file <- "data/raw/st422_week3_subscription_v3.csv"
+if (!exists("input_file")) {
+  input_file <- "data/raw/st422_week3_subscription_v3.csv"
+}
 output_dir <- "outputs/figures"
 
 # Ensure output directory exists

@@ -35,7 +35,10 @@ fmt_med_iqr <- function(x) {
 # ------------------------------------------------------------------------------
 
 # Define paths (Relative paths for reproducibility)
-input_file  <- "data/raw/st422_week3_subscription_v3.csv" 
+# Input file (Configurable for v1/v2/v3)
+if (!exists("input_file")) {
+  input_file <- "data/raw/st422_week3_subscription_v3.csv"
+}
 output_file <- "outputs/tables/table1.png"
 
 # Ensure output directory exists
@@ -167,4 +170,4 @@ k_table <- kable(
 # Save as PNG
 save_kable(k_table, file = output_file, zoom = 2, density = 300)
 message(paste("Table 1 successfully saved to:", output_file))
-k_table
+print(k_table)
