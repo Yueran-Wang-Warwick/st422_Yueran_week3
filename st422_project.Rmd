@@ -24,8 +24,8 @@ The dataset contains customer attributes such as region and plan type, usage pro
 
 ### Table 1
 
-```{r}
-source("src/make_table1.R")
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("src/make_table1.R", local = TRUE)$value
 ```
 
 ### Key results from Table 1
@@ -35,7 +35,7 @@ Customers are split across Basic, Standard, and Premium plans, with Basic the la
 
 ### Figure 1 & 2
 
-```{r}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("src/make_figures.R")
 ```
 
@@ -51,5 +51,12 @@ The stacked bar chart shows churn within 90 days is highest for Basic, lower for
 
 ```{r}
 renv::snapshot()
+```
+
+
+### html report
+
+```{r}
+rmarkdown::render("st422_project.Rmd", output_dir = "reports")
 ```
 

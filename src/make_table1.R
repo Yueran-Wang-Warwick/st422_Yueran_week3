@@ -167,4 +167,4 @@ k_table <- kable(
 # Save as PNG
 save_kable(k_table, file = output_file, zoom = 2, density = 300)
 message(paste("Table 1 successfully saved to:", output_file))
-print(k_table)
+k_table
