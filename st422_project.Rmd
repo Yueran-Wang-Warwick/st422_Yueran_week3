@@ -1,0 +1,52 @@
+---
+title: "st422_week3"
+author: '2201370'
+date: "2026-01-26"
+output: html_document
+---
+
+### Restore Environment
+
+```{r}
+renv::restore()
+```
+
+
+### Report purpose
+
+This short report demonstrates a fully reproducible workflow for producing a standard Table 1 and two figures from the subscription dataset. The goal is that the same code runs end to end when the input file is switched between dataset versions, with outputs written to a fixed folder structure.
+
+
+###Data and approach
+
+The dataset contains customer attributes such as region and plan type, usage proxies like days since last login, and outcomes such as churn within 90 days and NPS score. The analysis summarises customer characteristics by plan type using Table 1, then uses two visuals to highlight how satisfaction and churn vary across plans. Continuous variables are summarised using median and IQR, and categorical variables use counts and percentages. Missingness is reported only when present.
+
+
+### Table 1
+
+```{r}
+source("src/make_table1.R")
+```
+
+### Key results from Table 1
+
+Customers are split across Basic, Standard, and Premium plans, with Basic the largest group. Regions are broadly similar across plans, with no single plan dominated by one region. Tenure is similar across plans, while monthly fees differ substantially, which is expected given plan pricing. NPS is higher for Premium customers than for Basic and Standard, and the proportion of missing NPS is low and consistent across plans.
+
+
+### Figure 1 & 2
+
+```{r}
+source("src/make_figures.R")
+```
+
+### Figure 1: Customer satisfaction distribution (NPS)
+
+The NPS boxplot shows a clear shift upwards for Premium users. The median and the upper range of NPS are higher in Premium than in Basic, with Standard sitting in between. Even though there is overlap, the distribution suggests Premium users tend to report better satisfaction overall.
+
+
+### Figure 2: Churn risk by plan type
+
+The stacked bar chart shows churn within 90 days is highest for Basic, lower for Standard, and lowest for Premium. This aligns with the NPS pattern, where higher satisfaction is paired with lower churn. It supports a simple story that plan tier is associated with retention, either because Premium attracts different customers, offers better value, or both.
+
+
+
