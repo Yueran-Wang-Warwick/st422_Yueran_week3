@@ -49,4 +49,7 @@ The NPS boxplot shows a clear shift upwards for Premium users. The median and th
 The stacked bar chart shows churn within 90 days is highest for Basic, lower for Standard, and lowest for Premium. This aligns with the NPS pattern, where higher satisfaction is paired with lower churn. It supports a simple story that plan tier is associated with retention, either because Premium attracts different customers, offers better value, or both.
 
 
+```{r}
+renv::snapshot()
+```
 
