@@ -41,7 +41,8 @@ st422-week3-yourname/
 │   ├── tables/                # Generated summary tables
 │   └── figures/               # Generated plots
 ├── reports/
-│   └── report.md              # Final analytical report
+│   ├── reports.Rmd            # Final analytical report
+│   └── reports.html           # Rendered HTML file
 ├── src/
 │   ├── make_table1.R          # Script to generate Table 1
 │   └── make_figures.R         # Script to generate Figures 1 & 2
@@ -49,8 +50,6 @@ st422-week3-yourname/
 ├── ST422_week3.Rproj          # RStudio Project file
 ├── renv.lock                  # Exact package versions for reproducibility
 └── README.md                  # This file
-
-
 
 ---
 
@@ -94,7 +93,12 @@ Follow these steps to generate the analysis outputs from scratch.
 Run the following script to create the baseline characteristics table:
 
 ```R
+# For v3
 input_file <- "data/raw/st422_week3_subscription_v3.csv"
+source("src/make_table1.R")
+
+# For v2 (you only need to change the file name, v1 is similar)
+input_file <- "data/raw/st422_week3_subscription_v2.csv"
 source("src/make_table1.R")
 ```
 
@@ -108,7 +112,12 @@ source("src/make_table1.R")
 Run the following script to create the NPS and Churn charts:
 
 ```R
+# For v3
 input_file <- "data/raw/st422_week3_subscription_v3.csv"
+source("src/make_figures.R")
+
+# For v2 (you only need to change the file name, v1 is similar)
+input_file <- "data/raw/st422_week3_subscription_v2.csv"
 source("src/make_figures.R")
 ```
 
